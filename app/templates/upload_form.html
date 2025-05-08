@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Analysis Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 300px;
+            display: block;
+            margin-top: 10px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f2f2f2;
+            border-left: 5px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Image for Face Analysis</h1>
+    <form action="/upload/" method="post" enctype="multipart/form-data">
+        <label for="file">Choose image:</label>
+        <input type="file" name="file" id="file" accept="image/*" required><br><br>
+
+        <label for="text">Text Input (optional):</label>
+        <input type="text" name="text" id="text"><br><br>
+
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <div class="result">
+            <h2>Analysis Result:</h2>
+            <p>{{ result | safe }}</p>
+            {% if image_path %}
+                <h3>Uploaded Image:</h3>
+                <img src="{{ image_path }}" alt="Uploaded image">
+            {% endif %}
+        </div>
+    {% endif %}
+</body>
+</html>
