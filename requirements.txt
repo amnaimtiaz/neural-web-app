@@ -104,9 +104,9 @@ tf_keras==2.19.0
 threadpoolctl==3.6.0
 timm==1.0.15
 tokenizers==0.21.1
-torch==2.2.2
-torchaudio==2.2.2
-torchvision==0.17.2
+torch==2.2.2+cpu
+torchaudio==2.2.2+cpu
+torchvision==0.17.2+cpu
 tqdm==4.67.1
 transformers==4.51.3
 typing-inspection==0.4.0
