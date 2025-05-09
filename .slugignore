@@ -1,0 +1,14 @@
+# .slugignore
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.zip
+*.tar
+*.tar.gz
+*.whl
+__pycache__/
+data/
+models/
+notebooks/
+*.ipynb
