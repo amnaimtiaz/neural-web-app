@@ -16,6 +16,8 @@ models/
 data/
 datasets/
 notebooks/
+/uploads/*
+*.h5
 
 # Ignore any virtual environment or dependencies copied into the repo
 venv/
