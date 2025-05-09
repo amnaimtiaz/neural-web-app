@@ -1,14 +1,22 @@
-# .slugignore
+# Ignore cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore notebooks, models, and datasets
+*.ipynb
 *.pt
 *.pth
 *.ckpt
 *.h5
 *.zip
-*.tar
 *.tar.gz
-*.whl
-__pycache__/
-data/
+*.tar
 models/
+data/
+datasets/
 notebooks/
-*.ipynb
+
+# Ignore any virtual environment or dependencies copied into the repo
+venv/
+.env/
