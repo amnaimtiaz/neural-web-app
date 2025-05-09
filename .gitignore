@@ -7,3 +7,5 @@ __pycache__/
 *.pt
 *.onnx
 *.tflite
+/uploads/*
+*.h5
