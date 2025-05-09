@@ -17,6 +17,12 @@ from .image_classifiers import detect_mask, detect_blur, detect_beard
 # Initialize FastAPI
 app = FastAPI()
 
+@app.on_event("startup")
+async def preload_models():
+    from deepface.basemodels import VGGFace, Facenet
+    _ = VGGFace.loadModel()
+    _ = Facenet.loadModel()
+
 # Mount static files (uploaded images)
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 templates = Jinja2Templates(directory="app/templates")
